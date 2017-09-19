@@ -30,7 +30,7 @@ Prob3Table::Prob3Table(char* txt, int row, int col){
 void Prob3Table::calcTable(){
     rowSum = new int[rows];
     colSum = new int[cols];
-    
+    grandTotal=0;
     for(int i=0; i<rows; i++)
         rowSum[i] = 0;
     for(int i=0; i<cols; i++)
@@ -44,18 +44,29 @@ void Prob3Table::calcTable(){
         for(int j=0; j<rows; j++){
             colSum[i] += table[j*cols+i];
         }
-    for(int i=0, j=0; i<rows, j<cols; i++, j++){
-        grandTotal += rowSum[i] + colSum[j];
+    for(int i=0; i<rows; i++){
+        grandTotal += rowSum[i];
     }
 }
 
-Prob3TableInherited::Prob3TableInherited(char *txt,int row,int col)
-:Prob3Table(txt, row, col){
+Prob3TableInherited::Prob3TableInherited(char *txt,int r,int c)
+:Prob3Table(txt, r, c){
     this->calcTable();
-    int nRow = row+1;
-    int nCol = col+1;
-    augTable = new int[nRow*nCol];
-    for(int i=0;i<row; i++)
+    
+    augTable = new int[(r+1)*(c+1)];
+    for(int i = 0; i < r; i++)
+        for(int j = 0; j < c; j++)
+        {
+            augTable[i*c+(j+i)] = table[i*c+j]; 
+        }
+    
+    for(int i = 0; i < r; i++)
+        augTable[i*c+(c+i)] = rowSum[i];
+    
+    for(int i = 0; i < c; i++)
+        augTable[r*(c+1)+i] = colSum[i];
+    
+    augTable[r*(c+1)+c] = grandTotal;
 }
 
     
