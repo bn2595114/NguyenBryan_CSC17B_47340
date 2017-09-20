@@ -29,7 +29,7 @@ function Card(number){
 Card.prototype.setFace=function(){
     var num=this.number%13+1;
     if(num>10)num=10;
-    else if(num==1)num=11;
+    else if(num===1)num=11;
     if(num>=2&&num<=11)this.faceVal=num;
     else this.faceVal=-2;
 };
