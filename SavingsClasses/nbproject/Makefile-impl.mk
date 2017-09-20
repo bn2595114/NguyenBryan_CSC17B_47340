@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CPP_Constructs
+PROJECTNAME=SavingsClasses
 
 # Active Configuration
 DEFAULTCONF=Debug

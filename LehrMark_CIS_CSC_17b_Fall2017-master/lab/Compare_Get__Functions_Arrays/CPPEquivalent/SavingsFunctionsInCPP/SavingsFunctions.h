@@ -1,11 +1,15 @@
-#include <cmath>
-#include <iomanip>
-#include <iostream>
-using namespace std;
-#include "SavingClass.h"
+/* 
+ * File:   main.cpp
+ * Author: Dr. Mark E. Lehr
+ * Created on September 13, 2017, 11:43 AM
+ * Purpose:  Used as C++ functions for testing
+ *           the GET/POST of PHP/Java-script
+ */
+#ifndef SAVINGSFUNCTIONS_H
+#define SAVINGSFUNCTIONS_H
 
 //Savings with a for-loop
-float SavingsClass::save1(float pv,float intr,int n){
+float save1(float pv,float intr,int n){
     for(int year=1;year<=n;year++){
         pv*=(1+intr);
     }
@@ -13,23 +17,23 @@ float SavingsClass::save1(float pv,float intr,int n){
 }
 
 //Savings with a power function
-float SavingsClass::save2(float pv,float intr,int n){
+float save2(float pv,float intr,int n){
     return pv*pow((1+intr),n);
 }
 
 //Savings with the exponential-log
-float SavingsClass::save3(float pv,float intr,int n){
+float save3(float pv,float intr,int n){
     return pv*exp(n*log(1+intr));
 }
 
 //Savings with recursion
-float SavingsClass::save4(float pv,float intr,int n){
+float save4(float pv,float intr,int n){
     if(n<=0)return pv;
     return save4(pv,intr,n-1)*(1+intr);
 }
 
 //Savings with a defaulted parameter
-float SavingsClass::save5(float pv,float intr,int n=12){
+float save5(float pv,float intr,int n=12){
     for(int year=1;year<=n;year++){
         pv*=(1+intr);
     }
@@ -37,12 +41,12 @@ float SavingsClass::save5(float pv,float intr,int n=12){
 }
 
 //Savings with a reference object
-void SavingsClass::save6(float pv,float intr,int n,float &fv){
+void save6(float pv,float intr,int n,float &fv){
     fv=pv*exp(n*log(1+intr));
 }
 
 //Savings with an array
-float *SavingsClass::save7(float pv,float intr,int n){
+float *save7(float pv,float intr,int n){
     //Declare an array
     float *fv=new float[n];
     //Calculate all the values in the array
@@ -54,7 +58,7 @@ float *SavingsClass::save7(float pv,float intr,int n){
 }
 
 //Display the savings array
-void SavingsClass::display(float *fv,int n){
+void display(float *fv,int n){
     //Output the heading for our table
     cout<<endl;
     cout<<fixed<<setprecision(2)<<showpoint;
@@ -65,3 +69,6 @@ void SavingsClass::display(float *fv,int n){
     }
     cout<<endl;
 }
+
+#endif /* SAVINGSFUNCTIONS_H */
+

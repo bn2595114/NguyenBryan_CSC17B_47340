@@ -5,14 +5,14 @@
  */
 
 /* 
- * File:   SavingClass.h
+ * File:   SavingsClass.h
  * Author: Bryan
  *
- * Created on September 19, 2017, 5:00 PM
+ * Created on September 19, 2017, 5:06 PM
  */
 
-#ifndef SAVINGCLASS_H
-#define SAVINGCLASS_H
+#ifndef SAVINGSCLASS_H
+#define SAVINGSCLASS_H
 
 class SavingsClass{
     private:
@@ -30,5 +30,6 @@ class SavingsClass{
         void display(float*, int);
 };
 
-#endif /* SAVINGCLASS_H */
+
+#endif /* SAVINGSCLASS_H */
 
