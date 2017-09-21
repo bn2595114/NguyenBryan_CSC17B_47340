@@ -25,11 +25,14 @@
             fv2 = new S2(pv,int,nYears);
             fv3 = new S3(pv,int,nYears);
             fv4 = new S4(pv,int,nYears);
+			//fv4.save4(); Cannot figure out why the recursion is overflowing
             fv5 = new S5(pv,int);
-            
-            var fv6={save:0};
-            S6(pv,int,nYears,fv6);
-            var fv7=S7(pv,int,nYears);
+			var fv60={save:0};
+            fv6 = new S6(pv,int,nYears, fv60);
+			fv6.save6();
+            fv7 = new S7(pv,int,nYears);
+			dplay = new Display();
+			
 
             //Display the results
             document.write("<p>Present Value   = $"+pv+"</p>");
@@ -37,11 +40,11 @@
             document.write("<p>Number of Years = "+nYears+"</p>");
             document.write("<p>Future Value    = $"+(fv1.save1()*1).toFixed(2)+"</p>");
             document.write("<p>Future Value    = $"+(fv2.save2()*1).toFixed(2)+"</p>");
-            document.write("<p>Future Value    = $"+fv3.toFixed(2)+"</p>");
-            document.write("<p>Future Value    = $"+fv4.toFixed(2)+"</p>");
-            document.write("<p>Future Value    = $"+fv5.toFixed(2)+"</p>");
-            document.write("<p>Future Value    = $"+fv6.save.toFixed(2)+"</p>");
-            display(fv7);	
+            document.write("<p>Future Value    = $"+(fv3.save3()*1).toFixed(2)+"</p>");
+            //document.write("<p>Future Value    = $"+(fv4.pv*1).toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+(fv5.save5()*1).toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv60.save.toFixed(2)+"</p>");
+            dplay.display(fv7.save7());	
         </script>
     </body>
 </html>

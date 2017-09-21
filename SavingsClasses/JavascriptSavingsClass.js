@@ -31,6 +31,7 @@ function S6(pv,int,n, fv){
     this.pv = pv;
     this.int = int;
     this.n = n;
+	this.fv = fv;
 }
 
 function S7(pv,int,n){
@@ -39,12 +40,12 @@ function S7(pv,int,n){
     this.n = n;
 }
 
-function Display(fv){
+function Display(){
 }
 
 //Savings with a for-loop
 S1.prototype.save1=function(){
-    for(var year=1;year<=n;year++){
+    for(var year=1;year<=this.n;year++){
         this.pv*=(1+this.int);
     }
     return this.pv;
@@ -63,7 +64,7 @@ S3.prototype.save3 = function(){
 //Savings with recursion
 S4.prototype.save4 = function(){
     if(this.n<=0)return this.pv;
-    return save4(this.pv,this.int,this.n-1)*(1+this.int);
+    return S4.prototype.save4(this.pv,this.int,this.n-1)*(1+this.int);
 };
 
 //Savings with a defaulted parameter
@@ -76,7 +77,7 @@ S5.prototype.save5 = function(){
 
 //Savings with a reference object
 S6.prototype.save6 = function(){
-    this.fv.save=this.pv*Math.exp(this.n*Math.log(1+this.int));
+    (this.fv).save=this.pv*Math.exp(this.n*Math.log(1+this.int));
 };
 
 //Savings with an array
@@ -85,21 +86,21 @@ S7.prototype.save7 = function(){
     var fv=new Array();
     //Calculate all the values in the array
     fv[0]=this.pv;
-    for(var year=1;year<=n;year++){
+    for(var year=1;year<=this.n;year++){
         fv[year]=fv[year-1]*(1+this.int);
     }
     return fv;
 };
 
 //Display the savings array
-Display.prototype.display = function(){
+Display.prototype.display = function(fv){
     //Output the heading for our table
     document.write('<table width="200" border="1">');
     document.write("<tr><th>Years</th><th>Savings</th></tr>");
-    for(var year=0;year<this.fv.length;year++){
+    for(var year=0;year<fv.length;year++){
         document.write("<tr>");
         document.write("<td>"+year+"</td>");
-        var x=1*this.fv[year];
+        var x=1*fv[year];
         document.write("<td>$"+x.toFixed(2)+"</td>");
         document.write("</tr>");
     }
