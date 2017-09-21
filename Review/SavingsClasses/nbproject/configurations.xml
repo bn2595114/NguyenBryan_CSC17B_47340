@@ -15,9 +15,15 @@
                    projectFiles="true">
       <itemPath>JavascriptForm.html</itemPath>
       <itemPath>JavascriptSavingsClass.js</itemPath>
+      <itemPath>PHPFormGet.html</itemPath>
+      <itemPath>PHPFormPost.html</itemPath>
+      <itemPath>PHPSavingsFunctions.php</itemPath>
       <itemPath>Savings.html</itemPath>
+      <itemPath>Savings.php</itemPath>
       <itemPath>SavingsClass.cpp</itemPath>
       <itemPath>_GET_Savings.html</itemPath>
+      <itemPath>_GET_Savings.php</itemPath>
+      <itemPath>_POST_Savings.php</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -46,13 +52,25 @@
       </item>
       <item path="JavascriptSavingsClass.js" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="PHPFormGet.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PHPFormPost.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PHPSavingsFunctions.php" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Savings.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Savings.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SavingsClass.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SavingsClass.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="_GET_Savings.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_GET_Savings.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_POST_Savings.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -81,13 +99,25 @@
       </item>
       <item path="JavascriptSavingsClass.js" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="PHPFormGet.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PHPFormPost.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PHPSavingsFunctions.php" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Savings.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Savings.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SavingsClass.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SavingsClass.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="_GET_Savings.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_GET_Savings.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_POST_Savings.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
