@@ -1,0 +1,77 @@
+<em> italics
+<strong> bold 
+
+<ul> unordered list (bullet points)
+	<li> bullet point
+</ul>
+
+<ol> ordered list (numbered points)
+	<li>
+</ol>
+
+<img src="">
+<video src="">
+<a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
+
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
+// The target blank means new page.
+
+  <a href="./index.html">Brown Bear</a>
+  <a href="./aboutme.html">About Me</a>
+// opens from a different file. use the "./"
+
+
+<p id="top"> This is the top of the page! </p> //gave variables so
+<h1 id="bottom">This is the bottom! </h1>      //ordered list can link them on same page
+<ol>
+  <li><a href="#top">Top</a></li>
+  <li><a href="#bottom">Bottom</a></li>
+</ol>
+
+<nav> // nav is linking to same page on the site or other pages on same site(navigation)
+  <a href="./index.html">Brown Bear</a>
+  <a href="./aboutme.html">About Me</a>
+  </nav>
+
+<table>
+  <thead>	//table header use <th> for elements
+    <tr>	// table row
+      <th>Quarter</th>	//inserting these headers into the row
+      <th>Revenue</th>
+      <th>Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Q1</th>
+      <td>$10M</td>
+      <td>$7.5M</td>
+    </tr>
+    <tr>
+      <th>Q2</th>
+      <td>$12M</td>
+      <td>$5M</td>
+    </tr>
+  </tbody>
+  <tfoot>	// last row of table
+    <tr>
+      <th>Total</th>
+      <td>$22M</td>
+      <td>$12.5M</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Small text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text

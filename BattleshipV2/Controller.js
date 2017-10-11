@@ -10,6 +10,7 @@ var model = new Model();
 
 function Controller(){
     this.guesses=0;
+	
 }
 
     Controller.prototype.processGuess=function(guess) {

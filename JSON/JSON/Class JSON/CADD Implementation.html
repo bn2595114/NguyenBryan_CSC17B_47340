@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CADD IMPLEMENTATION</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="getForm.js"></script>
+        <script type="text/javascript" src="CADD.js"></script>
+    </head>
+    <body>
+        <h1>Add to Inventory</h1>
+        <form action="addInventory.html" method="get">
+            <input name="Product" type="text" />Product</br>
+            <input name="Inventory" type="text" />Inventory</br>
+            <input name="Price" type="text" />Price</br>
+            <input name="Submit" type="submit" />
+        </form>
+        <br>
+        <h1>Delete from Inventory</h1>
+        <form action="removeInventory.html" method="get">
+            <input name="inumber" type="text" />Item Num</br>
+            <input name="Submit" type="submit" />
+        </form>
+        <p id="dsply"></p>
+        
+    </body>
+</html>
